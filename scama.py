@@ -14,11 +14,11 @@ import params
 
 metaparams = {
 	'figure size'	: params.fgz,
-	'bins' 			: params.bins,
-	'font size'		: params.fsz,
+	'bins' 		: params.bins,
+	'font size'	: params.fsz,
 	'marker size'	: params.ms,
-	'alpha' 		: params.alpha,
-	'marker' 		: params.mkr,
+	'alpha' 	: params.alpha,
+	'marker' 	: params.mkr,
 	'color array' 	: params.colarr,
 	'line color' 	: params.lcol
 }
@@ -32,9 +32,9 @@ class scama(object):
 		self.bins 	= bins 	 if bins 	else metaparams['bins'] 
 		self.fsz  	= fsz  	 if fsz 	else metaparams['font size']
 		self.ms  	= ms  	 if ms 		else metaparams['marker size']
-		self.alpha  = alpha  if alpha 	else metaparams['alpha']
+		self.alpha  	= alpha  if alpha 	else metaparams['alpha']
 		self.mkr  	= mkr  	 if mkr 	else metaparams['marker']
-		self.colarr = colarr if colarr 	else metaparams['color array']
+		self.colarr 	= colarr if colarr 	else metaparams['color array']
 		self.lcol  	= lcol   if lcol  	else metaparams['line color']
 
 		# --- set up data
@@ -44,7 +44,7 @@ class scama(object):
 
 		self.ns, self.nf = self.mat.shape
 
-		self.labels = np.unique(self.lbl) # labels keys
+		self.labels 	= np.unique(self.lbl) # labels keys
 		self.feat 	= np.arange(self.nf)  # features id
 
 		self.draw_figure()
